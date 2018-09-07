@@ -29,10 +29,16 @@ I = str(input("Please enter a string of text (the bigger the better): "))
 print("You entered " + '"' + I + '". Now jumble it:')
 letters = []
 words = []
-index = 1
+index = 0
+newWord = 1
 for i in I:
     if i != " " and newWord == 0:
         words[index] += i
-
-
-print()
+    elif newWord == 1:
+        words.append(i)
+        newWord = 0
+    else:
+        newWord = 1
+        index += 1
+    letters.append(i)
+    
