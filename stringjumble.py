@@ -27,8 +27,8 @@ erehT era a wef seuqinhcet ro skcirt taht uoy yam dnif ydnah
 """
 I = str(input("Please enter a string of text (the bigger the better): "))
 print("You entered " + '"' + I + '". Now jumble it:')
-letters = []
 words = []
+letters = ""
 index = 0
 newWord = 1
 for i in I:
@@ -40,15 +40,16 @@ for i in I:
     else:
         newWord = 1
         index += 1
-    letters.append(i)
-    
-print(letters[len(letters)::-1])
-print(words[len(words)::-1])
-
+    letters += i
 index = 0 
 newWord = 1
-words2 = []
+words2 = ""
 for i in words:
     l = list(i)
-    words2.append(l[len(l)::-1])
+    #words2 = "".join(l[len(l)::-1])
+    words2 += "".join(l[len(l)::-1])
+    words2 += " "
+
 print(words2)
+print(letters[len(letters)::-1])
+print(words[len(words)::-1])
