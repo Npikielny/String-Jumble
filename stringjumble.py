@@ -45,16 +45,11 @@ for i in I:
 print(letters[len(letters)::-1])
 print(words[len(words)::-1])
 
-words2 = []
 index = 0 
 newWord = 1
-for i in letters:
-    if i != " " and newWord == 0:
-        words2[index] += i
-    elif newWord == 1:
-        words2.append(i)
-        newWord = 0
-    else:
-        newWord = 1
-        index += 1
-print(words2[len(words2)::1])
+word = []
+words2 = []
+for i in words:
+    for k in i:
+        word.append(k)
+    words2.append(word[])
