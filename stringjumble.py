@@ -53,6 +53,6 @@ for i in words:
     words2 += " "
     words1 = i + " " + words1
     
-print(letters)
+print(letters[len(letters)::-1])
 print(words1)
 print(words2)
