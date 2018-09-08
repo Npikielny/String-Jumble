@@ -41,15 +41,18 @@ for i in I:
         newWord = 1
         index += 1
     letters += i
+
 index = 0 
 newWord = 1
 words2 = ""
+words1 = ""
 for i in words:
     l = list(i)
     #words2 = "".join(l[len(l)::-1])
     words2 += "".join(l[len(l)::-1])
     words2 += " "
-
+    words1 = i + " " + words1
+    
+print(letters)
+print(words1)
 print(words2)
-print(letters[len(letters)::-1])
-print(words[len(words)::-1])
