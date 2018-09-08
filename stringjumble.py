@@ -47,9 +47,8 @@ print(words[len(words)::-1])
 
 index = 0 
 newWord = 1
-word = []
 words2 = []
 for i in words:
-    for k in i:
-        word.append(k)
-    words2.append(word[])
+    l = list(i)
+    words2.append(l[len(l)::-1])
+print(words2)
